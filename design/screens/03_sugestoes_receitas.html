@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chef de Despensa - Receitas Inteligentes</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e6eeff",
+            "surface": "#f8f9ff",
+            "on-tertiary-container": "#79000e",
+            "tertiary": "#b91a24",
+            "on-tertiary-fixed": "#410004",
+            "on-primary-fixed": "#002113",
+            "inverse-surface": "#27313f",
+            "secondary": "#855300",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#930013",
+            "on-surface-variant": "#3c4a42",
+            "background": "#f8f9ff",
+            "tertiary-container": "#ff7a73",
+            "outline-variant": "#bbcabf",
+            "secondary-fixed": "#ffddb8",
+            "on-secondary-container": "#684000",
+            "primary-fixed-dim": "#4edea3",
+            "surface-container-highest": "#d9e3f6",
+            "on-primary-container": "#00422b",
+            "primary-fixed": "#6ffbbe",
+            "on-tertiary": "#ffffff",
+            "on-background": "#121c2a",
+            "surface-dim": "#d0dbed",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-error": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#fea619",
+            "on-secondary-fixed-variant": "#653e00",
+            "error": "#ba1a1a",
+            "on-secondary-fixed": "#2a1700",
+            "primary": "#006c49",
+            "outline": "#6c7a71",
+            "surface-container-high": "#dee9fc",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#4edea3",
+            "tertiary-fixed": "#ffdad7",
+            "surface-tint": "#006c49",
+            "surface-variant": "#d9e3f6",
+            "on-primary-fixed-variant": "#005236",
+            "inverse-on-surface": "#eaf1ff",
+            "on-surface": "#121c2a",
+            "surface-container-low": "#eff4ff",
+            "primary-container": "#10b981"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-tablet": "2rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "gutter-desktop": "2rem",
+            "gutter-tablet": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for clean chip horizontal scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- Mobile Android Container (Max 448px width) -->
+<div class="w-full max-w-md min-h-screen bg-surface flex flex-col relative pb-32">
+<!-- Top App Bar (Header) -->
+<header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md px-4 pt-3 pb-3 flex items-center justify-between shadow-[0_2px_12px_-2px_rgba(31,41,55,0.03)]">
+<div class="flex items-center gap-3">
+<button aria-label="Voltar" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform text-on-surface" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Chef de Despensa</span>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">Receitas com Ingredientes Prestes a Vencer</h1>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Buscar receitas" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+<button aria-label="Filtrar despensa" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container active:scale-95 transition-transform text-on-surface-variant relative" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+<span class="w-2 h-2 rounded-full bg-primary-container absolute top-2 right-2 ring-2 ring-surface"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="px-4 pt-2 flex flex-col gap-4">
+<!-- Urgency Alert Summary Banner / Pill -->
+<section class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 shadow-[0_4px_16px_-2px_rgba(31,41,55,0.04)] flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined fill text-[20px]">timer</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+              Ação Prioritária
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Pantry Zero Waste</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium mt-1">
+            Aproveitando 3 itens críticos: <strong class="text-secondary font-semibold">Frango</strong>, <strong class="text-secondary font-semibold">Iogurte</strong> e <strong class="text-secondary font-semibold">Tomate</strong>.
+          </p>
+</div>
+</section>
+<!-- Filter Chips Carousel -->
+<nav aria-label="Filtros rápidos" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-4 px-4">
+<!-- Active Chip -->
+<button class="shrink-0 h-10 px-4 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg flex items-center gap-1.5 shadow-[0_2px_8px_rgba(16,185,129,0.25)]" type="button">
+<span class="material-symbols-outlined fill text-[18px]">check</span>
+<span>Todas</span>
+<span class="ml-0.5 px-1.5 py-0.2 rounded-full bg-on-primary-container/15 text-label-sm">8</span>
+</button>
+<!-- Inactive Chips -->
+<button class="shrink-0 h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant font-label-lg text-label-lg flex items-center gap-1.5 hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Prontas em 20 min</span>
+</button>
+<button class="shrink-0 h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant font-label-lg text-label-lg flex items-center gap-1.5 hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+<span>Almoço</span>
+</button>
+<button class="shrink-0 h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant font-label-lg text-label-lg flex items-center gap-1.5 hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">nightlight</span>
+<span>Jantar</span>
+</button>
+<button class="shrink-0 h-10 px-4 rounded-full bg-surface-container-lowest border border-outline-variant/60 text-on-surface-variant font-label-lg text-label-lg flex items-center gap-1.5 hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>Fáceis</span>
+</button>
+</nav>
+<!-- Section Title & Counter -->
+<div class="flex items-center justify-between pt-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sugestões Inteligentes</h2>
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined fill text-[16px]">eco</span>
+          100% de resgate
+        </span>
+</div>
+<!-- RECIPE CARD 1 -->
+<article class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/30 shadow-[0_4px_16px_-2px_rgba(31,41,55,0.04)] flex flex-col gap-3.5 transition-all">
+<!-- Photo Container with Badges -->
+<div class="relative w-full h-48 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Frango Grelhado com Molho Cremoso de Iogurte" class="w-full h-full object-cover" data-alt="Close up gourmet food photography of seasoned golden grilled chicken breast sliced with fresh creamy Greek yogurt herb sauce drizzle and colorful cherry tomatoes, plated cleanly on minimalist ceramic dish with soft natural daylight kitchen environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIVrZXfgJoeQ0a4OJCHHvgXlmvwgP8TffzQLzhDqn96b4X1BRQvb31dKuGWMDkzu9xgOUb2CqXSLuFCj-ph-FSCoFx0zTMbtucfVJQ95uk3Yrm7rsefSt046AcG9rLTiJE98_AWielbFsxncaHmvmbdwplFOnEH3iudXV5IxUiunr40BJ_5udBfyX8e_FoP0Y2zeP8y3Op9ooonrbhAOb1n-WuMiL7Jda5bkycAjpoAA0lUMsK41_oCwBsSS5H7v4qCG31qDEAtQ4"/>
+<!-- Category Pill -->
+<div class="absolute top-3 left-3">
+<span class="px-3 py-1 rounded-full bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm font-semibold tracking-wide">
+              Prato Principal
+            </span>
+</div>
+<!-- Quick Metrics Bar overlay -->
+<div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>25 min</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">equalizer</span>
+<span>Fácil</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">local_fire_department</span>
+<span>380 kcal</span>
+</div>
+</div>
+</div>
+<!-- Recipe Header & Title -->
+<div>
+<!-- Urgency Match Status Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-container font-label-sm text-label-sm font-bold mb-1.5">
+<span class="material-symbols-outlined fill text-[14px]">warning</span>
+<span>Usa 3 itens prestes a vencer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Frango Grelhado com Molho Cremoso de Iogurte</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">
+            Combinação proteica e suculenta que consome seus filés e o pote aberto de iogurte natural com toque cítrico.
+          </p>
+</div>
+<!-- Food Waste Recovery Metric Bar -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Aproveitamento da Despensa</span>
+<span class="text-primary font-bold">85% em estoque</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-[85%]"></div>
+</div>
+</div>
+<!-- Ingredients List Section -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ingredientes Necessários</span>
+<span class="font-label-sm text-label-sm text-outline">5 itens</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<!-- Urgent Item 1 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Peito de Frango</strong>
+<span class="text-secondary font-medium">(vence em 2 dias)</span>
+</span>
+<!-- Urgent Item 2 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Iogurte Natural</strong>
+<span class="text-secondary font-medium">(vence amanhã)</span>
+</span>
+<!-- Urgent Item 3 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Tomate Cereja</strong>
+<span class="text-secondary font-medium">(vence em 3 dias)</span>
+</span>
+<!-- Pantry Staples In Stock -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>Azeite &amp; Alho</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>Pimenta &amp; Sal</span>
+</span>
+</div>
+</div>
+<!-- Action CTA -->
+<button class="w-full h-[52px] rounded-full bg-primary-container text-surface-container-lowest font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(16,185,129,0.3)] hover:opacity-95 active:scale-[0.98] transition-all mt-1" type="button">
+<span class="material-symbols-outlined fill text-[20px]">skillet</span>
+<span>Começar a Cozinhar</span>
+</button>
+</article>
+<!-- RECIPE CARD 2 -->
+<article class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/30 shadow-[0_4px_16px_-2px_rgba(31,41,55,0.04)] flex flex-col gap-3.5 transition-all">
+<!-- Photo Container with Badges -->
+<div class="relative w-full h-48 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Frigideira Rápida de Tomate Cereja e Frango" class="w-full h-full object-cover" data-alt="Top down overhead food photography of an appetizing sizzling skillet with juicy chicken cubes, roasted blistered cherry tomatoes, fresh basil leaves, and golden garlic cloves, rustic warm lighting inside a bright home kitchen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmq9O3fqe4GjIrXzrzfnLBpr4QzN_YxCd47X8SAB2R07Pix1IOkb0iQiXgJXnjhs--HFGbSfXlOxdNsNXzYcw70RGBDu7VNvDSEvPQSe8XAVf02hh73-uZv5876mdLIonDWiLjv6Tz_67PDNi4tItM3ybIrivQQH0waQCtve0_vzcpZ1HQuClFG55nj3w3rgY_92m3L1G8lOhZw174DURul392tKyNP4uBV7dz-tKnIxsPxSGtf7CFgl1fbpaL3tqZY1tXwX6vNQE"/>
+<!-- Category Pill -->
+<div class="absolute top-3 left-3">
+<span class="px-3 py-1 rounded-full bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm font-semibold tracking-wide">
+              Jantar Rápido
+            </span>
+</div>
+<!-- Quick Metrics Bar overlay -->
+<div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>18 min</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">equalizer</span>
+<span>Muito Fácil</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">local_fire_department</span>
+<span>310 kcal</span>
+</div>
+</div>
+</div>
+<!-- Recipe Header & Title -->
+<div>
+<!-- Urgency Match Status Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-container font-label-sm text-label-sm font-bold mb-1.5">
+<span class="material-symbols-outlined fill text-[14px]">warning</span>
+<span>Usa 2 itens prestes a vencer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Frigideira Rápida de Tomate Cereja e Frango</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">
+            Refogado aromático de uma panela só para transformar os tomates maduros em um molho rústico encorpado.
+          </p>
+</div>
+<!-- Food Waste Recovery Metric Bar -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Aproveitamento da Despensa</span>
+<span class="text-primary font-bold">100% em estoque</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-full"></div>
+</div>
+</div>
+<!-- Ingredients List Section -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ingredientes Necessários</span>
+<span class="font-label-sm text-label-sm text-outline">4 itens</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<!-- Urgent Item 1 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Tomate Cereja</strong>
+<span class="text-secondary font-medium">(vence em 3 dias)</span>
+</span>
+<!-- Urgent Item 2 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Filé de Frango</strong>
+<span class="text-secondary font-medium">(vence em 2 dias)</span>
+</span>
+<!-- Pantry Staples In Stock -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>Manjericão Fresco</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>Azeite de Oliva</span>
+</span>
+</div>
+</div>
+<!-- Action CTA -->
+<button class="w-full h-[52px] rounded-full bg-primary-container text-surface-container-lowest font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(16,185,129,0.3)] hover:opacity-95 active:scale-[0.98] transition-all mt-1" type="button">
+<span class="material-symbols-outlined fill text-[20px]">skillet</span>
+<span>Cozinhar Agora</span>
+</button>
+</article>
+<!-- RECIPE CARD 3 -->
+<article class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/30 shadow-[0_4px_16px_-2px_rgba(31,41,55,0.04)] flex flex-col gap-3.5 transition-all">
+<!-- Photo Container with Badges -->
+<div class="relative w-full h-48 rounded-2xl overflow-hidden bg-surface-container">
+<img alt="Omelete Recheada de Espinafre e Queijo" class="w-full h-full object-cover" data-alt="Artisanal food photograph of a folded fluffy golden french omelet filled with steamed dark green baby spinach, melted cheese and diced tomatoes, served with microgreens on an emerald tinted pastel ceramic plate with natural morning window lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhtag58PQXHz1s3Et0TUPovUxawq4n959Ey8E3mniBCtWrpQ2j90Fl0MLEMWDKjkospqm68zJVhDKq_vIs38ic0AaSOEq4xY_IjMKTy4lDs0WpNNGswfe_j15xgbevZMT5dLiwQ26dakbeSSV3PxxZ-ZDbFuDXBhA349T_IhpRXShDwnqEWIBciIobellFz4Jpx0WeIYNOAyL5vlb2nw4zm_05eaQR4_g99gZCmgQkVGsucVYJS8QyoVL0LUB403iogD6weadEefI"/>
+<!-- Category Pill -->
+<div class="absolute top-3 left-3">
+<span class="px-3 py-1 rounded-full bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm font-semibold tracking-wide">
+              Lanche Prático
+            </span>
+</div>
+<!-- Quick Metrics Bar overlay -->
+<div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>12 min</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">equalizer</span>
+<span>Fácil</span>
+</div>
+<div class="flex items-center gap-1.5 bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1 rounded-full text-inverse-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">local_fire_department</span>
+<span>240 kcal</span>
+</div>
+</div>
+</div>
+<!-- Recipe Header & Title -->
+<div>
+<!-- Urgency Match Status Badge -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-secondary-fixed text-on-secondary-container font-label-sm text-label-sm font-bold mb-1.5">
+<span class="material-symbols-outlined fill text-[14px]">warning</span>
+<span>Usa 2 itens prestes a vencer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Omelete Recheada de Espinafre e Queijo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-0.5">
+            Opção instantânea rica em micronutrientes para não desperdiçar as folhas verdes e queijo fracionado.
+          </p>
+</div>
+<!-- Food Waste Recovery Metric Bar -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Aproveitamento da Despensa</span>
+<span class="text-primary font-bold">100% em estoque</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-full"></div>
+</div>
+</div>
+<!-- Ingredients List Section -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ingredientes Necessários</span>
+<span class="font-label-sm text-label-sm text-outline">4 itens</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<!-- Urgent Item 1 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Espinafre Fresco</strong>
+<span class="text-secondary font-medium">(vence hoje)</span>
+</span>
+<!-- Urgent Item 2 -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 border border-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">check_circle</span>
+<strong class="font-semibold">Queijo Minas</strong>
+<span class="text-secondary font-medium">(vence em 2 dias)</span>
+</span>
+<!-- Pantry Staples In Stock -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>3 Ovos Caipiras</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">kitchen</span>
+<span>Manteiga</span>
+</span>
+</div>
+</div>
+<!-- Action CTA -->
+<button class="w-full h-[52px] rounded-full bg-primary-container text-surface-container-lowest font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(16,185,129,0.3)] hover:opacity-95 active:scale-[0.98] transition-all mt-1" type="button">
+<span class="material-symbols-outlined fill text-[20px]">skillet</span>
+<span>Começar a Cozinhar</span>
+</button>
+</article>
+</main>
+<!-- Bottom Navigation Bar (Android M3 style, Active: Receitas) -->
+<nav class="fixed bottom-0 max-w-md w-full z-40 bg-surface-container-lowest/95 backdrop-blur-lg px-6 py-2 shadow-[0_-4px_24px_rgba(31,41,55,0.06)] flex items-center justify-around">
+<!-- Despensa Tab -->
+<a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-primary transition-colors group" href="#despensa">
+<div class="w-12 h-8 rounded-full flex items-center justify-center group-hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px]">kitchen</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Despensa</span>
+</a>
+<!-- Quick Add / Escanear Center Action -->
+<a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-primary transition-colors group" href="#adicionar">
+<div class="w-12 h-8 rounded-full flex items-center justify-center group-hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Adicionar</span>
+</a>
+<!-- Receitas Tab (ACTIVE) -->
+<a class="flex flex-col items-center justify-center py-1 text-primary transition-colors" href="#receitas">
+<div class="w-16 h-8 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined fill text-primary text-[24px]">restaurant_menu</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary mt-0.5">Receitas</span>
+</a>
+<!-- Perfil / Config -->
+<a class="flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-primary transition-colors group" href="#perfil">
+<div class="w-12 h-8 rounded-full flex items-center justify-center group-hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium mt-0.5">Impacto</span>
+</a>
+</nav>
+</div>
+</body></html>

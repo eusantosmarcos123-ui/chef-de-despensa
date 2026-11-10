@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chef de Despensa - Adicionar Ingrediente</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#002113",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#6ffbbe",
+            "surface-container-low": "#eff4ff",
+            "secondary": "#855300",
+            "on-secondary-container": "#684000",
+            "error": "#ba1a1a",
+            "tertiary": "#b91a24",
+            "primary": "#006c49",
+            "outline-variant": "#bbcabf",
+            "on-secondary-fixed-variant": "#653e00",
+            "inverse-on-surface": "#eaf1ff",
+            "inverse-primary": "#4edea3",
+            "surface-container-high": "#dee9fc",
+            "surface-container": "#e6eeff",
+            "on-tertiary-fixed-variant": "#930013",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#121c2a",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdad7",
+            "surface-tint": "#006c49",
+            "surface-bright": "#f8f9ff",
+            "secondary-container": "#fea619",
+            "outline": "#6c7a71",
+            "on-background": "#121c2a",
+            "surface-variant": "#d9e3f6",
+            "surface-container-highest": "#d9e3f6",
+            "on-primary-fixed-variant": "#005236",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#ff7a73",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary-fixed": "#ffddb8",
+            "primary-container": "#10b981",
+            "surface": "#f8f9ff",
+            "primary-fixed-dim": "#4edea3",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#79000e",
+            "inverse-surface": "#27313f",
+            "on-secondary-fixed": "#2a1700",
+            "on-primary-container": "#00422b",
+            "on-tertiary-fixed": "#410004",
+            "on-surface-variant": "#3c4a42",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb3ad",
+            "background": "#f8f9ff",
+            "surface-dim": "#d0dbed"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "3rem",
+            "gutter-desktop": "2rem",
+            "space-xl": "2rem",
+            "margin-tablet": "2rem",
+            "gutter": "1rem",
+            "gutter-tablet": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-active {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide native number spinners */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F9FAFB] text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-on-primary">
+<!-- Mobile Form Frame / Canvas -->
+<div class="w-full max-w-lg min-h-screen flex flex-col bg-[#F9FAFB] relative pb-32">
+<!-- Top App Bar (Material Design 3 Small Top App Bar) -->
+<header class="sticky top-0 z-30 bg-[#F9FAFB]/95 backdrop-blur-md px-4 py-3 flex items-center justify-between transition-shadow duration-200">
+<div class="flex items-center gap-3">
+<button aria-label="Voltar" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-variant/40 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Adicionar Ingrediente</h1>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Ajuda e orientações" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant/40 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">help_outline</span>
+</button>
+<button aria-label="Mais opções" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant/40 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-4 space-y-5 pt-1">
+<!-- 1. Hero / Tip Card (Tonal Container with Micro Illustration) -->
+<section class="bg-surface-container-low rounded-lg p-4 border border-[rgba(31,41,55,0.06)] relative overflow-hidden shadow-sm">
+<div class="flex items-start gap-3.5 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined fill-active text-[22px]">eco</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-primary font-bold">Dica do Chef</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-container text-on-primary">Anti-desperdício</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Monitore a validade com precisão para receber alertas oportunos e sugestões de receitas antes que o alimento expire.
+            </p>
+</div>
+</div>
+</section>
+<!-- Form Section Container -->
+<form class="space-y-5" id="ingredient-form" onsubmit="event.preventDefault();">
+<!-- 2. Nome do Ingrediente (Material 3 Outlined Text Field) -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-[rgba(31,41,55,0.06)] shadow-sm space-y-2">
+<label class="font-label-lg text-label-lg text-on-surface block" for="ingredient-name">
+            Nome do Ingrediente <span class="text-tertiary">*</span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-4 pointer-events-none text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</div>
+<input class="w-full h-14 pl-12 pr-12 bg-white rounded-2xl border border-[#E5E7EB] font-body-lg text-body-lg text-on-surface focus:border-primary-container focus:ring-4 focus:ring-primary-container/20 transition-all outline-none" id="ingredient-name" placeholder="Ex: Leite Integral, Tomate Italiano" type="text" value="Queijo Minas Frescal"/>
+<button aria-label="Limpar campo" class="absolute right-3.5 w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" onclick="document.getElementById('ingredient-name').value='';" type="button">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+</button>
+</div>
+<div class="flex justify-between items-center px-1">
+<span class="font-body-md text-body-md text-outline">Ex: Leite Integral, Tomate Italiano, Queijo Minas</span>
+<span class="font-label-sm text-label-sm text-outline">Obrigatório</span>
+</div>
+</div>
+<!-- 3. Quantidade e Unidade de Medida -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-[rgba(31,41,55,0.06)] shadow-sm space-y-3.5">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface">Quantidade</label>
+<span class="font-label-md text-label-md text-primary font-semibold">Unidade fracionada</span>
+</div>
+<!-- Numeric Stepper -->
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-2xl border border-[rgba(31,41,55,0.06)]">
+<button aria-label="Diminuir quantidade" class="w-12 h-12 rounded-xl bg-white border border-[#E5E7EB] text-on-surface hover:bg-surface active:scale-95 flex items-center justify-center shadow-xs transition-all" id="btn-decrement" type="button">
+<span class="material-symbols-outlined text-[22px]">remove</span>
+</button>
+<div class="flex items-baseline gap-1 text-center">
+<input class="w-24 text-center font-headline-md text-headline-md bg-transparent border-0 font-bold text-on-surface focus:ring-0 p-0" id="quantity-input" min="0.1" step="0.5" type="number" value="1.5"/>
+</div>
+<button aria-label="Aumentar quantidade" class="w-12 h-12 rounded-xl bg-primary-container text-white hover:opacity-95 active:scale-95 flex items-center justify-center shadow-xs transition-all" id="btn-increment" type="button">
+<span class="material-symbols-outlined text-[22px]">add</span>
+</button>
+</div>
+<!-- Unit Selector (Segmented Pill Group) -->
+<div>
+<span class="font-label-sm text-label-sm text-outline mb-2 block uppercase tracking-wider">Unidade de Medida</span>
+<div class="grid grid-cols-5 gap-1.5 p-1 bg-surface-container-low rounded-2xl border border-[rgba(31,41,55,0.06)]">
+<button class="unit-chip h-10 rounded-xl font-label-md text-label-md flex items-center justify-center transition-all bg-primary-container text-white font-bold shadow-sm" data-unit="kg" type="button">
+                kg
+              </button>
+<button class="unit-chip h-10 rounded-xl font-label-md text-label-md flex items-center justify-center transition-all bg-transparent text-on-surface-variant hover:bg-white/60" data-unit="g" type="button">
+                g
+              </button>
+<button class="unit-chip h-10 rounded-xl font-label-md text-label-md flex items-center justify-center transition-all bg-transparent text-on-surface-variant hover:bg-white/60" data-unit="un" type="button">
+                un
+              </button>
+<button class="unit-chip h-10 rounded-xl font-label-md text-label-md flex items-center justify-center transition-all bg-transparent text-on-surface-variant hover:bg-white/60" data-unit="L" type="button">
+                L
+              </button>
+<button class="unit-chip h-10 rounded-xl font-label-md text-label-md flex items-center justify-center transition-all bg-transparent text-on-surface-variant hover:bg-white/60" data-unit="ml" type="button">
+                ml
+              </button>
+</div>
+</div>
+</div>
+<!-- 4. Categoria (Material 3 Choice / Filter Chips) -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-[rgba(31,41,55,0.06)] shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Categoria</label>
+<span class="font-label-sm text-label-sm text-outline">Selecione uma</span>
+</div>
+<div class="flex flex-wrap gap-2" id="category-group">
+<!-- Chip 1 -->
+<button class="category-chip px-3.5 py-2 rounded-full border border-[#E5E7EB] bg-white font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">nutrition</span>
+<span>Vegetais</span>
+</button>
+<!-- Chip 2 -->
+<button class="category-chip px-3.5 py-2 rounded-full border border-[#E5E7EB] bg-white font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">kebab_dining</span>
+<span>Carnes</span>
+</button>
+<!-- Chip 3 (Active) -->
+<button class="category-chip active-cat px-3.5 py-2 rounded-full border border-primary-container bg-primary-container/15 font-label-md text-label-md text-on-primary-container font-bold flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined fill-active text-[18px] text-primary">egg_alt</span>
+<span>Laticínios</span>
+<span class="material-symbols-outlined text-[16px] text-primary">check</span>
+</button>
+<!-- Chip 4 -->
+<button class="category-chip px-3.5 py-2 rounded-full border border-[#E5E7EB] bg-white font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+<span>Grãos &amp; Massas</span>
+</button>
+<!-- Chip 5 -->
+<button class="category-chip px-3.5 py-2 rounded-full border border-[#E5E7EB] bg-white font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">nature</span>
+<span>Frutas</span>
+</button>
+<!-- Chip 6 -->
+<button class="category-chip px-3.5 py-2 rounded-full border border-[#E5E7EB] bg-white font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+<span>Bebidas</span>
+</button>
+</div>
+</div>
+<!-- 5. Data de Validade & Countdown Relative Badge -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-[rgba(31,41,55,0.06)] shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Data de Validade</label>
+<!-- Dynamic Relative Shelf-life Status Chip -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-bold bg-[#FFFBEB] text-[#92400E] border border-[#F59E0B]/30">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+              Vence em 5 dias
+            </span>
+</div>
+<!-- M3 Date Picker Field Container -->
+<div class="relative flex items-center bg-white rounded-2xl border border-[#E5E7EB] hover:border-primary-container p-2.5 transition-all">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low text-primary flex items-center justify-center mr-3 shrink-0">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-outline block">Data estimada</span>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">28 de Outubro, 2024</p>
+</div>
+<!-- Modal/Action trigger button -->
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-low text-primary font-label-md text-label-md hover:bg-primary-container/20 active:scale-95 flex items-center gap-1 transition-all" id="open-calendar-btn" type="button">
+<span>Alterar</span>
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</button>
+</div>
+<!-- Shelf-life Visual Progress Bar -->
+<div class="pt-1 space-y-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ciclo de Frescor</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Consumo Recomendado</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-500" style="width: 72%;"></div>
+</div>
+</div>
+</div>
+<!-- 6. Local de Armazenamento (Storage Locations) -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-[rgba(31,41,55,0.06)] shadow-sm space-y-3">
+<label class="font-label-lg text-label-lg text-on-surface block">Local de Armazenamento</label>
+<div class="grid grid-cols-3 gap-2.5" id="storage-group">
+<!-- Geladeira (Selected) -->
+<button class="storage-card selected-storage p-3 rounded-2xl border-2 border-primary-container bg-primary-container/10 flex flex-col items-center justify-center text-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[26px] text-primary fill-active">kitchen</span>
+<span class="font-label-md text-label-md font-bold text-on-primary-container">Geladeira</span>
+</button>
+<!-- Freezer -->
+<button class="storage-card p-3 rounded-2xl border border-[#E5E7EB] bg-white flex flex-col items-center justify-center text-center gap-1.5 hover:bg-surface active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[26px] text-on-surface-variant">ac_unit</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant">Freezer</span>
+</button>
+<!-- Despensa -->
+<button class="storage-card p-3 rounded-2xl border border-[#E5E7EB] bg-white flex flex-col items-center justify-center text-center gap-1.5 hover:bg-surface active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[26px] text-on-surface-variant">shelves</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant">Despensa</span>
+</button>
+</div>
+</div>
+</form>
+</main>
+<!-- 7. Bottom Action Bar (Fixed, Elevation 2 with Tonal Soft Stroke) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-lg border-t border-[rgba(31,41,55,0.08)] shadow-[0_-4px_20px_rgba(0,0,0,0.04)] py-3 px-4 flex justify-center">
+<div class="w-full max-w-lg flex flex-col gap-2">
+<button class="w-full h-[52px] bg-primary-container text-white font-label-lg text-label-lg font-bold rounded-full flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] shadow-[0_8px_24px_-2px_rgba(16,185,129,0.35)] transition-all" id="btn-save" type="button">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span>Salvar Ingrediente</span>
+</button>
+<button class="w-full h-11 text-outline font-label-md text-label-md rounded-full flex items-center justify-center hover:bg-surface-variant/30 active:scale-98 transition-all" type="button">
+          Cancelar
+        </button>
+</div>
+</div>
+<!-- Interactive M3 Date Picker Modal Dialog (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="datepicker-dialog">
+<div class="w-full max-w-sm bg-white rounded-3xl p-6 shadow-2xl border border-[rgba(31,41,55,0.08)] space-y-4 animate-in fade-in zoom-in duration-200">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Selecionar Validade</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">28 de Outubro, 2024</h3>
+</div>
+<!-- Month Navigation -->
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Outubro 2024</span>
+<div class="flex items-center gap-1">
+<button aria-label="Mês anterior" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant/40" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Próximo mês" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant/40" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm text-outline pt-1">
+<span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-body-md text-body-md pt-1">
+<!-- Calendar Days Mock -->
+<span class="text-outline-variant py-2">29</span>
+<span class="text-outline-variant py-2">30</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">1</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">2</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">3</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">4</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">5</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">6</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">7</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">8</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">9</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">10</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">11</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">12</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">13</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">14</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">15</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">16</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">17</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">18</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">19</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">20</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">21</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">22</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">23</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">24</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">25</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">26</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">27</span>
+<!-- Active Date 28 -->
+<span class="py-2 bg-primary-container text-white font-bold rounded-full shadow-sm">28</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">29</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">30</span>
+<span class="py-2 hover:bg-surface-variant/40 rounded-full cursor-pointer">31</span>
+<span class="text-outline-variant py-2">1</span>
+<span class="text-outline-variant py-2">2</span>
+</div>
+<!-- Dialog Buttons -->
+<div class="flex justify-end gap-2 pt-4 border-t border-[rgba(31,41,55,0.06)]">
+<button class="px-4 py-2 text-outline font-label-md text-label-md rounded-full hover:bg-surface-variant/30" id="close-calendar-btn" type="button">
+            Cancelar
+          </button>
+<button class="px-5 py-2 bg-primary-container text-white font-label-md text-label-md rounded-full font-bold shadow-sm" id="confirm-calendar-btn" type="button">
+            Confirmar
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+    // Stepper logic
+    const qtyInput = document.getElementById('quantity-input');
+    const btnInc = document.getElementById('btn-increment');
+    const btnDec = document.getElementById('btn-decrement');
+
+    btnInc.addEventListener('click', () => {
+      let val = parseFloat(qtyInput.value) || 0;
+      qtyInput.value = (val + 0.5).toFixed(1);
+    });
+
+    btnDec.addEventListener('click', () => {
+      let val = parseFloat(qtyInput.value) || 0;
+      if (val > 0.5) {
+        qtyInput.value = (val - 0.5).toFixed(1);
+      }
+    });
+
+    // Unit Selector Segmented Pill Toggle
+    const unitChips = document.querySelectorAll('.unit-chip');
+    unitChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        unitChips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-white', 'font-bold', 'shadow-sm');
+          c.classList.add('bg-transparent', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-transparent', 'text-on-surface-variant');
+        chip.classList.add('bg-primary-container', 'text-white', 'font-bold', 'shadow-sm');
+      });
+    });
+
+    // Category Chips Toggle
+    const categoryChips = document.querySelectorAll('.category-chip');
+    categoryChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        categoryChips.forEach(c => {
+          c.classList.remove('active-cat', 'border-primary-container', 'bg-primary-container/15', 'text-on-primary-container', 'font-bold');
+          c.classList.add('border-[#E5E7EB]', 'bg-white', 'text-on-surface-variant');
+          const check = c.querySelector('.material-symbols-outlined:last-child');
+          if (check && check.innerText === 'check') check.remove();
+        });
+
+        chip.classList.remove('border-[#E5E7EB]', 'bg-white', 'text-on-surface-variant');
+        chip.classList.add('active-cat', 'border-primary-container', 'bg-primary-container/15', 'text-on-primary-container', 'font-bold');
+
+        const existingCheck = chip.querySelector('.material-symbols-outlined:last-child');
+        if (!existingCheck || existingCheck.innerText !== 'check') {
+          const checkIcon = document.createElement('span');
+          checkIcon.className = 'material-symbols-outlined text-[16px] text-primary';
+          checkIcon.innerText = 'check';
+          chip.appendChild(checkIcon);
+        }
+      });
+    });
+
+    // Storage Chips Toggle
+    const storageCards = document.querySelectorAll('.storage-card');
+    storageCards.forEach(card => {
+      card.addEventListener('click', () => {
+        storageCards.forEach(c => {
+          c.classList.remove('border-2', 'border-primary-container', 'bg-primary-container/10');
+          c.classList.add('border', 'border-[#E5E7EB]', 'bg-white');
+          const title = c.querySelector('span:last-child');
+          const icon = c.querySelector('.material-symbols-outlined');
+          if (title) {
+            title.classList.remove('font-bold', 'text-on-primary-container');
+            title.classList.add('font-medium', 'text-on-surface-variant');
+          }
+          if (icon) {
+            icon.classList.remove('text-primary', 'fill-active');
+            icon.classList.add('text-on-surface-variant');
+          }
+        });
+
+        card.classList.remove('border', 'border-[#E5E7EB]', 'bg-white');
+        card.classList.add('border-2', 'border-primary-container', 'bg-primary-container/10');
+        const title = card.querySelector('span:last-child');
+        const icon = card.querySelector('.material-symbols-outlined');
+        if (title) {
+          title.classList.remove('font-medium', 'text-on-surface-variant');
+          title.classList.add('font-bold', 'text-on-primary-container');
+        }
+        if (icon) {
+          icon.classList.remove('text-on-surface-variant');
+          icon.classList.add('text-primary', 'fill-active');
+        }
+      });
+    });
+
+    // Date Picker Modal open / close
+    const dateDialog = document.getElementById('datepicker-dialog');
+    const openCalendarBtn = document.getElementById('open-calendar-btn');
+    const closeCalendarBtn = document.getElementById('close-calendar-btn');
+    const confirmCalendarBtn = document.getElementById('confirm-calendar-btn');
+
+    openCalendarBtn.addEventListener('click', () => {
+      dateDialog.classList.remove('hidden');
+    });
+
+    const hideDialog = () => {
+      dateDialog.classList.add('hidden');
+    };
+
+    closeCalendarBtn.addEventListener('click', hideDialog);
+    confirmCalendarBtn.addEventListener('click', hideDialog);
+
+    // Save Feedback micro-toast
+    const saveBtn = document.getElementById('btn-save');
+    saveBtn.addEventListener('click', () => {
+      const originalText = saveBtn.innerHTML;
+      saveBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[22px] animate-spin">progress_activity</span>
+        <span>Adicionando...</span>
+      `;
+      saveBtn.disabled = true;
+      setTimeout(() => {
+        saveBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[22px]">done_all</span>
+          <span>Ingrediente Adicionado!</span>
+        `;
+        saveBtn.classList.replace('bg-primary-container', 'bg-primary');
+        setTimeout(() => {
+          saveBtn.innerHTML = originalText;
+          saveBtn.classList.replace('bg-primary', 'bg-primary-container');
+          saveBtn.disabled = false;
+        }, 1800);
+      }, 700);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,8 @@
+{
+  "name": "3. Sugestões de Receitas (TheMealDB)",
+  "prompt": "Android mobile recipe suggestion screen. Header 'Receitas com Ingredientes Prestes a Vencer'. Cards showing recipe photo, recipe name, category and ingredients list with button to cook.",
+  "id": "1a094d67ccec40fe82363844d7f35a14",
+  "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/58b06b54871c4535af17c4ee1027a5b9:download",
+  "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/d2e650e7d7d748599017f8d6ecd70080:download",
+  "timestamp": "2026-10-27T20:05:39.017Z"
+}

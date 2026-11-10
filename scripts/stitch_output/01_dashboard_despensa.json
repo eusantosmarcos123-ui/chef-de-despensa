@@ -1,0 +1,8 @@
+{
+  "name": "1. Despensa e Alertas de Validade (Dashboard)",
+  "prompt": "Android native mobile screen Material 3 for 'Chef de Despensa'. Top AppBar with title Chef de Despensa and expiration alert counter. RecyclerView of pantry ingredients with dynamic badges: green for safe, amber for expiring in 3 days, red for expired. Floating action button with + icon to add new ingredient, and button at the bottom to view suggested recipes from expiring items.",
+  "id": "5f44512f73d34dd49d771b479fcf48f4",
+  "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/41fbc7e263be4d9d820565ccaddf5c4c:download",
+  "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/aac33fe9d9614865a991116e659932b9:download",
+  "timestamp": "2026-10-27T20:01:31.752Z"
+}

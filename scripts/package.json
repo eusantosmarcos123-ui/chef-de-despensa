@@ -1,0 +1,12 @@
+{
+  "name": "stitch-antigravity-bridge",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync": "node stitch_sync.mjs"
+  },
+  "dependencies": {
+    "@google/stitch-sdk": "^0.3.5",
+    "dotenv": "^18.0.9"
+  }
+}

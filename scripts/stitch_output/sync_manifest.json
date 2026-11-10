@@ -1,0 +1,53 @@
+{
+  "project": "Chef de Despensa (Zero Desperdício)",
+  "stitchProjectId": "7620202662312616981",
+  "synchronizedAt": "2026-10-27T20:02:52.269Z",
+  "mappedLayouts": [
+    {
+      "stitchScreen": "01_dashboard_despensa",
+      "androidLayoutXml": "ChefDeDespensa/app/src/main/res/layout/activity_main.xml",
+      "androidItemXml": "ChefDeDespensa/app/src/main/res/layout/item_ingrediente.xml",
+      "javaActivity": "ChefDeDespensa/app/src/main/java/com/exemplo/chefdedespensa/ui/MainActivity.java",
+      "status": "SYNCHRONIZED_READY"
+    },
+    {
+      "stitchScreen": "02_cadastro_ingrediente",
+      "androidLayoutXml": "ChefDeDespensa/app/src/main/res/layout/activity_cadastro.xml",
+      "javaActivity": "ChefDeDespensa/app/src/main/java/com/exemplo/chefdedespensa/ui/CadastroActivity.java",
+      "status": "SYNCHRONIZED_READY"
+    },
+    {
+      "stitchScreen": "03_sugestoes_receitas",
+      "androidLayoutXml": "ChefDeDespensa/app/src/main/res/layout/activity_receitas.xml",
+      "androidItemXml": "ChefDeDespensa/app/src/main/res/layout/item_receita.xml",
+      "javaActivity": "ChefDeDespensa/app/src/main/java/com/exemplo/chefdedespensa/ui/ReceitasActivity.java",
+      "status": "SYNCHRONIZED_READY"
+    }
+  ],
+  "screens": [
+    {
+      "name": "1. Despensa e Alertas de Validade (Dashboard)",
+      "prompt": "Android native mobile screen Material 3 for 'Chef de Despensa'. Top AppBar with title Chef de Despensa and expiration alert counter. RecyclerView of pantry ingredients with dynamic badges: green for safe, amber for expiring in 3 days, red for expired. Floating action button with + icon to add new ingredient, and button at the bottom to view suggested recipes from expiring items.",
+      "id": "5f44512f73d34dd49d771b479fcf48f4",
+      "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/41fbc7e263be4d9d820565ccaddf5c4c:download",
+      "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/aac33fe9d9614865a991116e659932b9:download",
+      "timestamp": "2026-10-27T20:01:31.752Z"
+    },
+    {
+      "name": "2. Cadastro de Ingrediente (Formulário)",
+      "prompt": "Android native form screen Material 3 for adding a pantry ingredient. Input fields: Nome do Ingrediente (e.g., Leite, Tomate), Quantidade (number with unit selector: kg, g, un, L, ml), Data de Validade with interactive DatePicker calendar button. Primary button at bottom 'Salvar Ingrediente' and cancel button.",
+      "id": "a96a3be991bf40459640f1e246ba5b65",
+      "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/c3000b16ded74e958b4d594bc361bc2c:download",
+      "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/695f04f46c40424881f7f67a8f573962:download",
+      "timestamp": "2026-10-27T20:02:26.746Z"
+    },
+    {
+      "name": "3. Sugestões de Receitas (TheMealDB)",
+      "prompt": "Android mobile recipe suggestion screen. Header 'Receitas com Ingredientes Prestes a Vencer'. Cards showing recipe photo, recipe name, category and ingredients list with button to cook.",
+      "id": "1a094d67ccec40fe82363844d7f35a14",
+      "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/58b06b54871c4535af17c4ee1027a5b9:download",
+      "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/d2e650e7d7d748599017f8d6ecd70080:download",
+      "timestamp": "2026-10-27T20:05:39.017Z"
+    }
+  ]
+}

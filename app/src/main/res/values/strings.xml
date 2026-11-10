@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chef de Despensa</string>
+    <string name="title_despensa">Minha Despensa</string>
+    <string name="subtitle_despensa">Controle de validade e zero desperdício</string>
+    <string name="btn_cadastrar_novo">Novo Ingrediente</string>
+    <string name="btn_ver_receitas">Sugerir Receitas</string>
+    <string name="empty_despensa">Sua despensa está vazia!\nToque no botão + para cadastrar ingredientes.</string>
+</resources>

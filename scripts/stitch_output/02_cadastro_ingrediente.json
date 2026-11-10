@@ -1,0 +1,8 @@
+{
+  "name": "2. Cadastro de Ingrediente (Formulário)",
+  "prompt": "Android native form screen Material 3 for adding a pantry ingredient. Input fields: Nome do Ingrediente (e.g., Leite, Tomate), Quantidade (number with unit selector: kg, g, un, L, ml), Data de Validade with interactive DatePicker calendar button. Primary button at bottom 'Salvar Ingrediente' and cancel button.",
+  "id": "a96a3be991bf40459640f1e246ba5b65",
+  "htmlUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/c3000b16ded74e958b4d594bc361bc2c:download",
+  "imgUrl": "https://stitch.googleapis.com/v1/projects/7620202662312616981/files/695f04f46c40424881f7f67a8f573962:download",
+  "timestamp": "2026-10-27T20:02:26.746Z"
+}

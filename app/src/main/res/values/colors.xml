@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta Opção 3: Bistrô & Oliva (Mediterrâneo Aconchegante) -->
+    <color name="primary_green">#4A6B35</color>
+    <color name="primary_green_dark">#334D23</color>
+    <color name="primary_green_light">#E8F0E2</color>
+    <color name="accent_amber">#D48B38</color>
+
+    <!-- Alertas de Validade Bistrô & Oliva -->
+    <color name="badge_seguro_bg">#E8F0E2</color>
+    <color name="badge_seguro_text">#385527</color>
+    <color name="badge_seguro_border">#4A6B35</color>
+
+    <color name="badge_urgente_bg">#FDF2E2</color>
+    <color name="badge_urgente_text">#A85A17</color>
+    <color name="badge_urgente_border">#D48B38</color>
+
+    <color name="badge_vencido_bg">#FCE8E8</color>
+    <color name="badge_vencido_text">#A62424</color>
+    <color name="badge_vencido_border">#E54848</color>
+
+    <!-- Neutros & Interface (Creme de Linho Suave) -->
+    <color name="bg_screen">#F6F4ED</color>
+    <color name="card_surface">#FFFFFF</color>
+    <color name="text_primary">#1C2417</color>
+    <color name="text_secondary">#4D5647</color>
+    <color name="text_muted">#8A9484</color>
+    <color name="divider_border">#E6E4DC</color>
+</resources>
